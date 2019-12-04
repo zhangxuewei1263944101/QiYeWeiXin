@@ -5,14 +5,18 @@ import lombok.Data;
 @Data
 public class BaseRes {
 
-    private Integer code;
-
+    private int code;
+    private String message;
     private Object data;
 
-    private String msg;
+    public BaseRes() {}
 
     public BaseRes(int code) {
         this.code = code;
     }
 
+    public BaseRes(int code,String message) {
+        this.code = code;
+        this.message = message;
+    }
 }

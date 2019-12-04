@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8900
 spring:
   cache:
     type: ehcache
@@ -35,11 +35,39 @@ spring:
 #微信相关
 appid: ww344869af3ab283cb #企业ID
 agentid: 1000002 #应用AgentId
-redirectUri: http://open3.natapp1.cc/user/getUserInfo #扫码成功后，第三方网站指定自己的端口(进入controller根据返回的code进行)
+redirectUri: http://open3.natapp1.cc/page/login #第三方网站获取用户信息
 secret: jBuP7075r8Ck7725al13Rk0y5jzpCG5tUAMym8PQm3g #应用Secret
+tongXunLuSecret: sd6CE7cAmyf2k6IrR8ltuvIcY-kMmUbuiLCxD7JwZS8 #通讯录Secret
+# 获取token地址
 accessTokenUrl: https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={corpId}&corpsecret={corpsecret}
+# 获取用户id地址
 getUserIDUrl: https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=ACCESS_TOKEN&code=CODE
+
+# 获取用户信息地址
 getUserUrl: https://qyapi.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN&userid=USERID
+# 创建用户 post
+addUserUrl: https://qyapi.weixin.qq.com/cgi-bin/user/create?access_token=ACCESS_TOKEN
+# 更新用户 post
+updateUserUrl: https://qyapi.weixin.qq.com/cgi-bin/user/update?access_token=ACCESS_TOKEN
+# 删除用户 post
+delUserUrl: https://qyapi.weixin.qq.com/cgi-bin/user/delete?access_token=ACCESS_TOKEN&userid=USERID
+# 批量删除用户 post
+delUsersUrl: https://qyapi.weixin.qq.com/cgi-bin/user/batchdelete?access_token=ACCESS_TOKEN
+# 获取部门成员 get
+getDepartmentUsersUrl: https://qyapi.weixin.qq.com/cgi-bin/user/simplelist?access_token=ACCESS_TOKEN&department_id=DEPARTMENT_ID&fetch_child=FETCH_CHILD
+# 获取部门成员详情信息 GET
+getDepartmentUsersDetailUrl: https://qyapi.weixin.qq.com/cgi-bin/user/list?access_token=ACCESS_TOKEN&department_id=DEPARTMENT_ID&fetch_child=FETCH_CHILD
+
+# 创建部门地址
+addDepartmentUrl: https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=ACCESS_TOKEN
+# 更新部门地址
+updateDepartmentUrl: https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=ACCESS_TOKEN
+# 删除部门地址
+delDepartmentUrl: https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=ACCESS_TOKEN&id=DEPTID
+# 获取部门列表地址1（获取制定部门 部门id。获取指定部门及其下的子部门。 如果不填，默认获取全量组织架构）
+getDepartmentUrl1: https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=ACCESS_TOKEN&id=ID
+# 获取部门列表地址2 (获取全部 部门id。获取指定部门及其下的子部门。 如果不填，默认获取全量组织架构)
+getDepartmentUrl2: https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=ACCESS_TOKEN
 
 
 

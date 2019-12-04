@@ -59,14 +59,14 @@
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-apt</artifactId>
-            <version>${querydsl.version}</version>
+            <!--<version>${querydsl.version}</version>-->
             <scope>provided</scope>
         </dependency>
         <!--QueryDSL支持 -->
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-jpa</artifactId>
-            <version>${querydsl.version}</version>
+            <!--<version>${querydsl.version}</version>-->
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
