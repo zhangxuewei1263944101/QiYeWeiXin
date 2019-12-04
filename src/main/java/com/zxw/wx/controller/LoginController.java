@@ -51,7 +51,7 @@ public class LoginController {
         String userId  = weiXinService.getUserID(code);
         WeiXinUserInfoDTO weiXinUserInfoDTO = weiXinService.getUserInfo(userId);
 
-        session.setAttribute(AppConstant.SESSION_USER,weiXinUserInfoDTO);
+        session.setAttribute("user_session",weiXinUserInfoDTO);
         return "index";
 
     }

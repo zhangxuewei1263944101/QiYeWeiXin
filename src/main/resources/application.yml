@@ -33,11 +33,11 @@ spring:
     database: mysql
 
 #微信相关
-appid: ww344869af3ab283cb #企业ID
+appid: ww*********3cb #企业ID
 agentid: 1000002 #应用AgentId
 redirectUri: http://open3.natapp1.cc/page/login #第三方网站获取用户信息
-secret: jBuP7075r8Ck7725al13Rk0y5jzpCG5tUAMym8PQm3g #应用Secret
-tongXunLuSecret: sd6CE7cAmyf2k6IrR8ltuvIcY-kMmUbuiLCxD7JwZS8 #通讯录Secret
+secret: jBuP7075r*****************5tUAMym8PQm3g #应用Secret
+tongXunLuSecret: sd6CE7cAmyf***************buiLCxD7JwZS8 #通讯录Secret
 # 获取token地址
 accessTokenUrl: https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={corpId}&corpsecret={corpsecret}
 # 获取用户id地址
