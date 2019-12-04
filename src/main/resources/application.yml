@@ -1,0 +1,46 @@
+server:
+  port: 8081
+spring:
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:cacheable/wxCache.xml
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/wx?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: root
+    hikari:
+      minimum-idle: 20
+      maximum-pool-size: 100
+      pool-name: DatebookHikariCP
+      max-lifetime: 60000
+      auto-commit: true
+      connection-timeout: 60000
+      connection-test-query: select 1
+      idle-timeout: 60000
+      validation-timeout: 3000
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true                             #是否展示sql
+    properties:
+          hibernate:
+            format_sql: true                   #格式化sql
+    hibernate:                                 #是否自动生/更新成表，根据什么策略
+      ddl-auto: update
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+
+#微信相关
+appid: ww344869af3ab283cb #企业ID
+agentid: 1000002 #应用AgentId
+redirectUri: http://open3.natapp1.cc/user/getUserInfo #扫码成功后，第三方网站指定自己的端口(进入controller根据返回的code进行)
+secret: jBuP7075r8Ck7725al13Rk0y5jzpCG5tUAMym8PQm3g #应用Secret
+accessTokenUrl: https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={corpId}&corpsecret={corpsecret}
+getUserIDUrl: https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=ACCESS_TOKEN&code=CODE
+getUserUrl: https://qyapi.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN&userid=USERID
+
+
+
+
