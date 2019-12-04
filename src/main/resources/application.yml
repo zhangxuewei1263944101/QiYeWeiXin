@@ -35,7 +35,7 @@ spring:
 #微信相关
 appid: ww*********3cb #企业ID
 agentid: 1000002 #应用AgentId
-redirectUri: http://open3.natapp1.cc/page/login #第三方网站获取用户信息
+redirectUri: http://**********/page/login #第三方网站获取用户信息
 secret: jBuP7075r*****************5tUAMym8PQm3g #应用Secret
 tongXunLuSecret: sd6CE7cAmyf***************buiLCxD7JwZS8 #通讯录Secret
 # 获取token地址
